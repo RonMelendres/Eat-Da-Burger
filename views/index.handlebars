@@ -5,14 +5,14 @@
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    {{>burgers/}}
+    {{>burgers/eat-block }}
     {{/unless}}
     {{/each}}
 </ul>
 
 <li>
     {{burger_name}}
-    <button class="ate" data-id="{{id}}" data-newAte="{{ate}}">
+    <button class="ate" data-id="{{id}}" data-newate="{{ate}}">
         {{#if ate}}Eaten!{{else}}Devour{{/if}}
     </button>
 
