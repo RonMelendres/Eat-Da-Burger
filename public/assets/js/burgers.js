@@ -10,7 +10,12 @@ $(function() {
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newAteStatus
-        }).then
+        }).then(
+            function() {
+                console.log("changes sleep", newAte);
+                location.reload();
+            }
+        );
 
-    }
-}
+    });
+})
