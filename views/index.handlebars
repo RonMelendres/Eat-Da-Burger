@@ -2,19 +2,33 @@
 
 <h2>Burgers Ordered</h2>
 
-{{!-- <ul>
+<ul>
     {{#each burgers}}
     {{#unless devoured}}
     {{>burgers/}}
-</ul> --}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<li>
+    {{burger_name}}
+    <button class="ate" data-id="{{id}}" data-newAte="{{ate}}">
+        {{#if ate}}Eaten!{{else}}Devour{{/if}}
+    </button>
+
+</li>
+
+<h2>Burgers Eaten</h2>
 
 {{!-- <li>
     {{burger_name}}
     <button class="ate" data-id="{{id}}" data-newAte="{{ate}}">
-        {{#if ate}}Eaten!{{else}}Ordered{{/if}}
+        {{#if ate}}Devour{{else}}Eaten!{{/if}}
     </button>
 
 </li> --}}
+
+
 
 <h2>Order a Burger!</h2>
 
