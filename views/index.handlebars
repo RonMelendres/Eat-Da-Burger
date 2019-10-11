@@ -2,33 +2,27 @@
 
 <h2>Burgers Ordered</h2>
 
-{{!-- <ul>
+<ul>
     {{#each burgers}}
     {{#unless devoured}}
-    {{>burgers/eat-block }}
-    {{/unless}}
-    {{/each}}
-</ul> --}}
-
-<li>
-    {{burger_name}}
-    <button class="ate" data-id="{{id}}" data-newate="{{ate}}">
+    <h4>{{id}}. {{burger_name}}</h4>
+    <button class="change-eat" data-id="{{id}}">
         {{#if ate}}Eaten!{{else}}Devour{{/if}}
     </button>
-
-</li>
+    {{/unless}}
+    {{/each}}
+</ul>
 
 <h2>Burgers Eaten</h2>
 
-{{!-- <li>
-    {{burger_name}}
-    <button class="ate" data-id="{{id}}" data-newAte="{{ate}}">
-        {{#if ate}}Devour{{else}}Eaten!{{/if}}
-    </button>
+<li>
+    {{#each burgers}}
+    {{#if devoured}}
+    <h4>{{id}}.{{burger_name}}</h4>
+    {{/if}}
+    {{/each}}
 
-</li> --}}
-
-
+</li>
 
 <h2>Order a Burger!</h2>
 
@@ -41,3 +35,5 @@
 
     <button type="submit">Submit</button>
 </form>
+
+{{!-- data-newate="{{ate}}" --}}
